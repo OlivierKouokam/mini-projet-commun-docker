@@ -78,7 +78,7 @@ POZOS provides instructions to build the API container:
 - **Prerequisites:** The API uses Flask and requires additional packages. Install them using:
 
 ```bash
-apt update -y && apt install -y python3-dev libsasl2-dev libldap2-dev libssl-dev
+apt update -y && apt install python3-dev libsasl2-dev libldap2-dev libssl-dev gcc build-essential -y
 ```
 
 Copy `requirements.txt` to `/` and install packages:
