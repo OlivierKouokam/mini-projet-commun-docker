@@ -1,7 +1,7 @@
 # Mini-Projet Commun Docker
 BootCamp DevOps - Mini Projet Commun - Docker
 
-## MICROSERVICES ARCHITECTURE IN DOCKER ENGINE
+## ARCHITECTURE OF THE PROJECT'S MICROSERVICES IN THE DOCKER ENGINE
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9e5c8420-9879-4114-8519-5473c69c5581" />
 
