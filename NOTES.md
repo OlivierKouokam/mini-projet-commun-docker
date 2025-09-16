@@ -33,7 +33,7 @@ BootCamp DevOps - Mini Projet Commun - Docker
 
    - Thanks to our bridge-type network's dns functions, we can easyly use the api container name with the port we saw just before to adapt our website
 
-     sed -i 's\<api_ip_or_name:port>\pozos_api:5000\g' ./website/index.php
+     sed -i 's|<api_ip_or_name:port>|pozos_api:5000|g' ./website/index.php
 
 ## 5- Run the frontend webapp container :
    Username and password are provided in the source code simple_api/student_age.py
