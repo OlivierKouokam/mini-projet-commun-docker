@@ -16,7 +16,7 @@ services:
       - pozos_network
 
   pozos_api:
-    image: api-pozos:1
+    image: pozos-api:v1
     container_name: pozos_api
     volumes:
       - './simple_api/:/data/'
