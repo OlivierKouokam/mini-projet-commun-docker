@@ -92,9 +92,17 @@ BootCamp DevOps - Mini Projet Commun - Docker
    NB: for this exercise, I have left the credentials in the .yml file.
 
    - docker login localhost:5000
-   - docker image tag pozos-api:v1 localhost:5000/pozos/pozos-api:v1
+<img width="675" height="162" alt="image" src="https://github.com/user-attachments/assets/678f0d29-307f-4dee-9070-cc68b5a4466d" />
+   
+   - docker image tag pozos-api:v1 localhost:5000/pozos/pozos-api:v1   
    - docker images
+<img width="705" height="182" alt="image" src="https://github.com/user-attachments/assets/daf4e22b-067d-4399-94ad-b553875ad8d1" />
+   
    - docker image push localhost:5000/pozos/pozos-api:v1
+<img width="764" height="199" alt="image" src="https://github.com/user-attachments/assets/3ea433c3-3198-492d-958b-eb0bacb33e0c" />
 
   reload the browser to see the pushed image  
+<img width="947" height="413" alt="image" src="https://github.com/user-attachments/assets/d9782746-c972-47be-aa37-9d8f594e368a" />
+##
+<img width="950" height="410" alt="image" src="https://github.com/user-attachments/assets/9194f0b6-8edd-4a12-8b10-4869d4cba149" />
 
