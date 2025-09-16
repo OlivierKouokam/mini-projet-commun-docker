@@ -84,7 +84,7 @@ apt update -y && apt install python3-dev libsasl2-dev libldap2-dev libssl-dev gc
 Copy `requirements.txt` to `/` and install packages:
 
 ```bash
-pip3 install -r /requirements.txt
+pip install -r /requirements.txt
 ```
 
 - **Persistent Data:** Create a `/data` folder as a volume for storing student data. Mount `student_age.json` here.
