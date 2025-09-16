@@ -5,29 +5,29 @@ BootCamp DevOps - Mini Projet Commun - Docker
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9e5c8420-9879-4114-8519-5473c69c5581" />
 
-Build and test
+# BUILD AND TEST
 
-# Considering you just have cloned this repository, you have to follow those steps to get the 'student_list' application ready :
+<!-- Considering you just have cloned this repository, you have to follow those steps to get the 'student_list' application ready : -->
 
-1- Change directory and build the api container image :
+## 1- Change directory and build the api container image :
    - cd ./mini-projet-commun-docker/simple_api
    - docker build . -t pozos-api:v1
    - docker images
 
-2- Create a bridge-type network for the two containers to be able to contact each other by their names thanks to dns functions :
+## 2- Create a bridge-type network for the two containers to be able to contact each other by their names thanks to dns functions :
    - docker network create pozos_network --driver=bridge
    - docker network ls
 
-3- Move back to the root dir of the project and run the backend api container with those arguments :
+## 3- Move back to the root dir of the project and run the backend api container with those arguments :
    - cd ..
    - docker run --rm -d --name pozos_api --network pozos_network -v ./simple_api/:/data/ pozos-api:v1
    - docker ps
 
-# As you can see, the api backend container is listening to the 5000 port. This internal port can be reached by another container from the same network so I chose not to expose it.
+<!-- As you can see, the api backend container is listening to the 5000 port. This internal port can be reached by another container from the same network so I chose not to expose it. -->
 
-# I also had to mount the ./simple_api/ local directory in the /data/ internal container directory so the api can use the student_age.json list
+<!-- I also had to mount the ./simple_api/ local directory in the /data/ internal container directory so the api can use the student_age.json list -->
 
-4- Update the index.php file :
+## 4- Update the index.php file :
 
    - You need to update the following line before running the website container to make api_ip_or_name and port fit your deployment  $url = 'http://<api_ip_or_name:port>/pozos/api/v1.0/get_student_ages';
 
@@ -35,13 +35,13 @@ Build and test
 
      sed -i 's\<api_ip_or_name:port>\pozos_api:5000\g' ./website/index.php
 
-5- Run the frontend webapp container :
+## 5- Run the frontend webapp container :
    Username and password are provided in the source code simple_api/student_age.py
 
    - docker run --rm -d --name pozos_webapp -p 80:80 --network pozos_network -v ./website/:/var/www/html -e USERNAME=toto -e PASSWORD=python php:apache
    - docker ps
 
-6- Test the api through the frontend :
+## 6- Test the api through the frontend :
 
    Using command line :
 
@@ -56,7 +56,7 @@ Build and test
   - If you are working on PlayWithDocker, just open the 80 port on the gui
   - If not, type localhost:80
 
-7- Clean the workspace :
+## 7- Clean the workspace :
    Thanks to the --rm argument we used while starting our containers, they will be removed as they stop. Remove the network previously created.
 
   - docker stop pozos_api
@@ -67,18 +67,18 @@ Build and test
 
 --------------------------------------------------
 
-Deployment
+# DEPLOYMENT
 
-  # As the tests passed we can now 'composerize' our infrastructure by putting the docker run parameters in infrastructure as code format into a docker-compose.yml file.
+  <!-- As the tests passed we can now 'composerize' our infrastructure by putting the docker run parameters in infrastructure as code format into a docker-compose.yml file. -->
 
-  1- Run the application (api + webapp) :
+  ## 1- Run the application (api + webapp) :
      As we've already created the application image, now you just have to run :
 
     - docker-compose up -d
 
     Docker-compose permits to chose which container must start first. The api container will be first as I specified that the webapp depends_on: it.
 
-  2- Create a registry and its frontend
+  ## 2- Create a registry and its frontend
      I used registry:2 image for the registry, and joxit/docker-registry-ui:static for its frontend gui and passed some environment variables
 
      E.g we'll be able to delete images from the registry via the gui.
@@ -86,7 +86,7 @@ Deployment
      - docker-compose -f docker-compose-registry.yml up -d
      - on browser type: ip_add:8080
 
-3- Push an image on the registry and test the gui
+## 3- Push an image on the registry and test the gui
    You have to rename it before (:latest is optional) :
 
    NB: for this exercise, I have left the credentials in the .yml file.
