@@ -92,9 +92,9 @@ BootCamp DevOps - Mini Projet Commun - Docker
    NB: for this exercise, I have left the credentials in the .yml file.
 
    - docker login localhost:5000
-   - docker image tag api-pozos:1 localhost:5000/pozos/api-pozos:1
+   - docker image tag pozos-api:v1 localhost:5000/pozos/pozos-api:v1
    - docker images
-   - docker image push localhost:5000/pozos/api-pozos:1
+   - docker image push localhost:5000/pozos/pozos-api:v1
 
   reload the browser to see the pushed image  
 
