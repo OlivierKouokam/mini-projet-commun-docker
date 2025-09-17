@@ -31,7 +31,7 @@ Currently, the application runs on a single server without scalability or high a
 
 For this POC, you will use a single machine with Docker installed. Both the build and deployment processes will occur on this machine.
 
-POZOS recommends Ubuntu 20.04, the most commonly used OS in the company. You may use an Ubuntu 20.04-based virtual machine instead of your physical machine.
+POZOS recommends Ubuntu 22.04, the most commonly used OS in the company. You may use an Ubuntu 22.04-based virtual machine instead of your physical machine.
 
 Security is critical for POZOS DSI; therefore, do not disable the firewall or any other security mechanisms unless explicitly justified in your delivery.
 
