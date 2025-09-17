@@ -46,7 +46,7 @@ The application consists of two modules:
 
 Your task is to containerize each module separately and enable communication between them.
 
-Application source code: [student-list GitHub repository](https://github.com/diranetafen/student-list.git)
+Application source code: [student-list GitHub repository](https://github.com/OlivierKouokam/mini-projet-commun-docker/tree/main/student-list)
 
 ### Required Files
 
