@@ -5,7 +5,7 @@ BootCamp DevOps - Mini Projet Commun - Docker
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9e5c8420-9879-4114-8519-5473c69c5581" />
 
-# BUILD AND TEST
+# A- BUILD AND TEST
 
 <!-- Considering you just have cloned this repository, you have to follow those steps to get the 'student_list' application ready : -->
 
@@ -67,7 +67,7 @@ BootCamp DevOps - Mini Projet Commun - Docker
 
 --------------------------------------------------
 
-# DEPLOYMENT
+# B- DEPLOYMENT
 
   <!-- As the tests passed we can now 'composerize' our infrastructure by putting the docker run parameters in infrastructure as code format into a docker-compose.yml file. -->
 
@@ -101,7 +101,10 @@ BootCamp DevOps - Mini Projet Commun - Docker
    - docker image push localhost:5000/pozos/pozos-api:v1
 <img width="764" height="199" alt="image" src="https://github.com/user-attachments/assets/3ea433c3-3198-492d-958b-eb0bacb33e0c" />
 
+
   reload the browser to see the pushed image  
+
+  
 <img width="947" height="413" alt="image" src="https://github.com/user-attachments/assets/d9782746-c972-47be-aa37-9d8f594e368a" />
 ##
 <img width="950" height="410" alt="image" src="https://github.com/user-attachments/assets/9194f0b6-8edd-4a12-8b10-4869d4cba149" />
