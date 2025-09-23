@@ -101,9 +101,7 @@ BootCamp DevOps - Mini Projet Commun - Docker
    - docker image push localhost:5000/pozos/pozos-api:v1
 <img width="764" height="199" alt="image" src="https://github.com/user-attachments/assets/3ea433c3-3198-492d-958b-eb0bacb33e0c" />
 
-
-  reload the browser to see the pushed image  
-
+   - reload the browser to see the pushed image  
   
 <img width="947" height="413" alt="image" src="https://github.com/user-attachments/assets/d9782746-c972-47be-aa37-9d8f594e368a" />
 ##
